@@ -1,0 +1,8 @@
+resources:
+  touchFile:
+    path: v1/touchStart
+    command: 'touch start_$(date +%Y-%m-%d-%H:%M:%S)'
+  getError:
+    path: v1/getError
+    command: 'http --auth-type edgegrid -a default: :/diagnostic-tools/v1/errortranslator?errorCode=$ARG1'
+    argRegex:
